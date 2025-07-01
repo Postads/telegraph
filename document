@@ -9,8 +9,16 @@ php artisan telescope:install
 composer require defstudio/telegraph
 php artisan vendor:publish --tag="telegraph-migrations"
 php artisan vendor:publish --tag="telegraph-config"
+
+php8.2 artisan passport:install
+
+
 php artisan migrate
 
 
 Добавление БОТА *требуется ключ бота
  php artisan telegraph:new-bot
+
+
+swagger-generate
+php artisan l5-swagger:generate
