@@ -1,0 +1,16 @@
+composer create-project "laravel/laravel" telegraph
+cd telegraph
+composer require laravel/ui
+php artisan ui bootstrap --auth
+
+composer require laravel/telescope --dev
+php artisan telescope:install
+
+composer require defstudio/telegraph
+php artisan vendor:publish --tag="telegraph-migrations"
+php artisan vendor:publish --tag="telegraph-config"
+php artisan migrate
+
+
+Добавление БОТА *требуется ключ бота
+ php artisan telegraph:new-bot
